@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Data
 
@@ -19,7 +20,7 @@ public class UsuarioRepostiroty {
     public static void initUsuarios(){
         if(usuarios==null){
             usuarios=new ArrayList<>();
-            Usuario user = new Usuario("rodolfo","1234",1,"rodolfo");
+            Usuario user = new Usuario("rodolfo@gmail.com","1234",1,"rodolfo");
             usuarios.add(user);
         }
     }
@@ -32,11 +33,11 @@ public class UsuarioRepostiroty {
         };
         return null;
     }
-    public static Usuario ValidLogin(String login,String senha) {
+    public static Usuario ValidLogin(String email,String senha) {
 
         for (Usuario user :
                 usuarios) {
-            if (user.getLogin() == login && user.getSenha() == senha) {
+            if (Objects.equals(user.getEmail(), email) && Objects.equals(user.getSenha(), senha)) {
                 return user;
             }
         };

@@ -37,6 +37,6 @@ public class RestController {
     @ResponseBody
     public Usuario Login(@RequestBody RequestLogin request){
         UsuarioRepostiroty.initUsuarios();
-        return UsuarioRepostiroty.ValidLogin(request.getLogin(),request.getSenha());
+        return UsuarioRepostiroty.ValidLogin(request.getEmail(),request.getSenha());
     }
 }

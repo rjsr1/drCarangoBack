@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @NoArgsConstructor
 @EntityScan
 public class Usuario {
-    private String login;
+    private String email;
     private String senha;
     private int ID;
     private String nome;

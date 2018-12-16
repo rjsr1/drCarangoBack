@@ -8,6 +8,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @Data
 @NoArgsConstructor
 public class RequestLogin {
-    private String login;
+    private String email;
     private String senha;
 }
