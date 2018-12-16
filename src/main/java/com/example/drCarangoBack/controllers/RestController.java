@@ -20,6 +20,7 @@ public class RestController {
     @GetMapping(value="/oficina/{id}")
     @ResponseBody
     public Oficina getOficina(@PathVariable("id") int id){
+        OficinaRepository.initOficina();
         return OficinaRepository.getOficinaById(id);
     }
 
