@@ -13,6 +13,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class Usuario {
     private String email;
     private String senha;
-    private int ID;
+    private String ID;
     private String nome;
 }

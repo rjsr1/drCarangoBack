@@ -19,7 +19,7 @@ public class RestController {
     @RequestMapping(value="/oficinas/{tipoRanking}")
     @ResponseBody
     public List<Oficina> getoficinas(@PathVariable("tipoRanking") String tipoRanking){
-        Oficina of1 = new Oficina("Seu carro","Rua Raul pompeia, 294, Arruda, Recife","9999999999","sem promoções");
+        Oficina of1 = new Oficina("BiAuto","Rua Raul pompeia, 294, Arruda, Recife","9999999999","sem promoções");
         Oficina of2 = new Oficina("Seu carro","Rua Raul pompeia, 294, Arruda, Recife","9999999999","sem promoções");
         Oficina of3 = new Oficina("Seu carro","Rua Raul pompeia, 294, Arruda, Recife","9999999999","sem promoções");
         Oficina of4 = new Oficina("Seu carro","Rua Raul pompeia, 294, Arruda, Recife","9999999999","sem promoções");
