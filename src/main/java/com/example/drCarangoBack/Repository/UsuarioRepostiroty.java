@@ -27,7 +27,7 @@ public class UsuarioRepostiroty {
     public static Usuario getUsuario(int ID){
         for (Usuario user :
                 usuarios) {
-            if (user.getID()==ID) {
+            if (user.getId()==ID) {
                 return user;
             }
         };
