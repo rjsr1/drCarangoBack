@@ -1,7 +1,11 @@
 package com.example.drCarangoBack.controllers;
 
 
+import com.example.drCarangoBack.Repository.UsuarioRepostiroty;
 import com.example.drCarangoBack.entities.Oficina;
+import com.example.drCarangoBack.entities.RequestLogin;
+import com.example.drCarangoBack.entities.Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -9,6 +13,8 @@ import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
+
+
 
     @RequestMapping(value="/oficinas/{tipoRanking}")
     @ResponseBody
@@ -25,5 +31,12 @@ public class RestController {
         list.add(of4);
         list.add(of5);
         return list;
+    }
+
+    @PostMapping(value="/usuario/login")
+    @ResponseBody
+    public Usuario Login(@RequestBody RequestLogin request){
+        UsuarioRepostiroty.initUsuarios();
+        return UsuarioRepostiroty.ValidLogin(request.getLogin(),request.getSenha());
     }
 }
