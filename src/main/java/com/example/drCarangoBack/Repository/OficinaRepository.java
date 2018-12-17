@@ -12,7 +12,7 @@ public class OficinaRepository {
     public static void initOficina() {
         if (oficinas == null) {
             oficinas = new ArrayList<Oficina>();
-            Oficina of1 = new Oficina("BiAuto", "Av. Beberibe, 965 - Arruda, Recife - PE, 52041-430", "3241-8835", "", 1,-8.02,-34.8);
+            Oficina of1 = new Oficina("BiAuto", "Av. Beberibe, 965 - Arruda, Recife - PE, 52041-430", "3241-8835", "", 1,-8.028760,-34.892979);
             Oficina of2 = new Oficina("Lucena Auto Service", "R. Cel. Alfredo Duarte, 490 - Afogados, Recife - PE, 50830-380", "3428-2786", "Todos os serviços com 10% de desconto", 2,-8.069984,-34.911848);
             Oficina of3 = new Oficina("Centro Automotivo Piloto", "Av. Caxangá, 3515 - Iputinga, Recife - PE, 50670-000", "3034-4433", "", 3,-8.04186,-34.937447);
             Oficina of4 = new Oficina("Auto Total", "Av. Norte Miguel Arraes de Alencar, 4861 - Tamarineira, Recife - PE, 52051-000", "3441-5085", "10% desc troca de óleo", 4,-8.025054,-34.909322);
