@@ -21,7 +21,7 @@ public class RestController {
     @ResponseBody
     public static List<Comentario> getComentarios(@PathVariable("id")  int id){
         ComentarioRepository.initComentarios();
-        return getComentarios(id);
+        return ComentarioRepository.getComentarioByIdOficina(id);
     }
 
     @GetMapping(value="/oficina/{id}")
