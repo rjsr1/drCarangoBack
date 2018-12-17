@@ -15,4 +15,6 @@ public class Oficina {
     String fone;
     String promocao;
     int id;
+    double lat;
+    double lng;
 }
