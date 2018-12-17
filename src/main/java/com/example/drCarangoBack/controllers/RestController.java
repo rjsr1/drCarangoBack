@@ -44,4 +44,10 @@ public class RestController {
         UsuarioRepostiroty.initUsuarios();
         return UsuarioRepostiroty.ValidLogin(request.getEmail(),request.getSenha());
     }
+
+    @PostMapping(value="/usuario/cadastro")
+    public void Cadastrar(@RequestBody RequestLogin request){
+        UsuarioRepostiroty.initUsuarios();
+        UsuarioRepostiroty.AddUsuario(request.getEmail(),request.getSenha());
+    }
 }

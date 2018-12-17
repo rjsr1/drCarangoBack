@@ -44,4 +44,12 @@ public class UsuarioRepostiroty {
         return null;
     }
 
+    public static void AddUsuario(String email, String senha) {
+        usuarios.add(new Usuario(email,senha,usuarios.size()+1,buildNome(email)));
+    }
+
+    private static String buildNome(String email){
+        String[] splitName=email.split("@");
+        return splitName[0];
+    }
 }
