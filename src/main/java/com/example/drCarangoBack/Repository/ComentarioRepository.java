@@ -9,7 +9,7 @@ public class ComentarioRepository {
     private static ArrayList<Comentario> comentarios;
 
     public static void initComentarios(){
-        if(comentarios!=null){
+        if(comentarios==null){
             comentarios = new ArrayList<>();
             Comentario c1=new Comentario(1,"rodolfo","boa opção",5.0,1);
             Comentario c2=new Comentario(2,"carlos","boa opção",5.0,1);
