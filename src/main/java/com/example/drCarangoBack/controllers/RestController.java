@@ -1,8 +1,10 @@
 package com.example.drCarangoBack.controllers;
 
 
+import com.example.drCarangoBack.Repository.ComentarioRepository;
 import com.example.drCarangoBack.Repository.OficinaRepository;
 import com.example.drCarangoBack.Repository.UsuarioRepostiroty;
+import com.example.drCarangoBack.entities.Comentario;
 import com.example.drCarangoBack.entities.Oficina;
 import com.example.drCarangoBack.entities.RequestLogin;
 import com.example.drCarangoBack.entities.Usuario;
@@ -14,6 +16,13 @@ import java.util.List;
 public class RestController {
 
 
+
+    @GetMapping(value="/oficina/{id}/comentarios")
+    @ResponseBody
+    public static List<Comentario> getComentarios(@PathVariable("id")  int id){
+        ComentarioRepository.initComentarios();
+        return getComentarios(id);
+    }
 
     @GetMapping(value="/oficina/{id}")
     @ResponseBody
